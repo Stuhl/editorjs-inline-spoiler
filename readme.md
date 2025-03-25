@@ -71,6 +71,8 @@ You can customize the spoiler style by overwriting the `editorjs-inline-hotkey` 
 }
 ```
 
+![](assets/demo_custonm.gif)
+
 ## Development
 
 ```shell
