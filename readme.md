@@ -3,7 +3,7 @@
 ![Stability Badge](https://img.shields.io/badge/stability-stable-green.svg)
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-Adds a Inline Spoiler Marker for [Editor.js](https://editorjs.io). This plugin styling is easily customizeable (see further below).
+Adds a Inline Spoiler Marker for [Editor.js](https://editorjs.io). This plugins styling is easily customizeable (see further below).
 ![](assets/demo.gif)
 
 ## Installation
@@ -71,7 +71,7 @@ You can customize the spoiler style by overwriting the `editorjs-inline-hotkey` 
 }
 ```
 
-![](assets/demo_custonm.gif)
+![](assets/demo2.gif)
 
 ## Development
 
