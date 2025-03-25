@@ -17,10 +17,13 @@ class $149c1bd638913645$var$EditorJSInlineSpoiler {
         return "editorjs-inline-spoiler";
     }
     static{
-        this.title = "Hotkey";
+        this.title = "Spoiler";
     }
     addInlineCSS(span) {
         span.style.backgroundColor = "hsla(0, 0%, 6%, 1)";
+        span.style.padding = "2px";
+        span.style.cursor = "pointer";
+        span.style.borderRadius = "4px";
     }
     constructor({ api: api }){
         this.api = api;
@@ -48,19 +51,30 @@ class $149c1bd638913645$var$EditorJSInlineSpoiler {
     wrap(range) {
         const selectedText = range.extractContents();
         const spoiler = document.createElement("SPAN");
+        spoiler.setAttribute("aria-label", "spoiler-text");
         spoiler.classList.add($149c1bd638913645$var$EditorJSInlineSpoiler.CSS);
         this.addInlineCSS(spoiler);
+        spoiler.addEventListener("mouseover", ()=>{
+            spoiler.setAttribute("data-show", "true");
+            spoiler.style.backgroundColor = "hsla(0, 0%, 6%, 0.2)";
+        });
+        spoiler.addEventListener("mouseleave", ()=>{
+            spoiler.setAttribute("data-show", "false");
+            spoiler.style.backgroundColor = "hsla(0, 0%, 6%, 1)";
+        });
         spoiler.appendChild(selectedText);
         range.insertNode(spoiler);
         this.api.selection.expandToTag(spoiler);
     }
     unwrap(range) {
-        const selectedText = range.extractContents();
         const spoiler = this.api.selection.findParentTag("SPAN", $149c1bd638913645$var$EditorJSInlineSpoiler.CSS);
-        if (spoiler) {
+        const selectedText = range.extractContents();
+        const isEmpty = spoiler.innerHTML.length === 0;
+        if (spoiler && isEmpty) {
             spoiler.remove();
             range.insertNode(selectedText);
         }
+        if (!isEmpty) range.insertNode(selectedText);
     }
     checkState(selection) {
         const tag = this.api.selection.findParentTag("SPAN", $149c1bd638913645$var$EditorJSInlineSpoiler.CSS);
