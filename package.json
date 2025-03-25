@@ -10,6 +10,10 @@
       "optimize": true
     }
   },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Stuhl/editorjs-inline-spoiler"    
+  },
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build"
