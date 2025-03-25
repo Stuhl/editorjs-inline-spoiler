@@ -52,6 +52,7 @@ class $149c1bd638913645$var$EditorJSInlineSpoiler {
         const selectedText = range.extractContents();
         const spoiler = document.createElement("SPAN");
         spoiler.setAttribute("aria-label", "spoiler-text");
+        spoiler.setAttribute("data-show", "false");
         spoiler.classList.add($149c1bd638913645$var$EditorJSInlineSpoiler.CSS);
         this.addInlineCSS(spoiler);
         spoiler.addEventListener("mouseover", ()=>{

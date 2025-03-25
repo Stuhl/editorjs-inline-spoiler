@@ -69,6 +69,7 @@ class EditorJSInlineSpoiler {
     const spoiler      = document.createElement("SPAN")
 
     spoiler.setAttribute("aria-label", "spoiler-text")
+    spoiler.setAttribute("data-show", "false")
     spoiler.classList.add(EditorJSInlineSpoiler.CSS)
     this.addInlineCSS(spoiler)
 
