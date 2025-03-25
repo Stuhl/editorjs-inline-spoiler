@@ -1,6 +1,6 @@
 {
   "name": "editorjs-inline-spoiler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Inline Plugin for Editor.js where you can mark text as spoiler",
   "source": "src/index.ts",
   "main": "dist/main.js",
