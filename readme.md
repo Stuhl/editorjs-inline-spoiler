@@ -51,7 +51,7 @@ export const ReactEditor = () => {
 
 
 ## Style customization
-You can customize the spoiler style by overwriting the `editorjs-inline-hotkey` class. The plugin uses data-attributes to manage state. You can hook into these via CSS and style the show/hide styles too! Here is an example:
+You can customize the spoiler style by overwriting the `editorjs-inline-spoiler` class. The plugin uses data-attributes to manage state. You can hook into these via CSS and style the show/hide styles too! Here is an example:
 
 ```css
 .editorjs-inline-spoiler {
