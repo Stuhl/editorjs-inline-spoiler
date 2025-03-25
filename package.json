@@ -1,0 +1,25 @@
+{
+  "name": "editorjs-inline-spoiler",
+  "version": "1.0.0",
+  "description": "A Inline Plugin for Editor.js where you can mark text as spoiler",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
+  "scripts": {
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "author": "Kaan Aksu",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.14.2"
+  },
+  "dependencies": {
+    "@codexteam/icons": "^0.3.3"
+  }
+}
